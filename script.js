@@ -19,9 +19,14 @@ let songButtons = Array.from(document.getElementsByClassName("songPlayBtn"));
 let songs = [
     { songName: "Perfect", filePath: "Perfect.mp3", coverPath: "po1.jpeg" },
     { songName: "Promise", filePath: "Promise.mp3", coverPath: "po2.webp" },
-    { songName: "Preet Re", filePath: "Preet Re.mp3", coverPath: "po3.jpg" },
-    { songName: "Ishq Hai", filePath: "Ishq Hai.mp3", coverPath: "po4.webp" },
-    { songName: "O Maahi", filePath: "O Maahi.mp3", coverPath: "po5.jpg" }
+    { songName: "Dooron Dooron", filePath: "Dooron Dooron.mp3", coverPath: "po3.webp" },
+    { songName: "Samjho Na", filePath: "SAMJHO NA.mp3", coverPath: "po4.webp" },
+    { songName: "Arz Kiya Hai", filePath: "Arz Kiya Hai.mp3", coverPath: "po5.webp" },
+    { songName: "Ehsaas", filePath: "Ehsaas.mp3", coverPath: "po6.webp" },
+    { songName: "Kashish", filePath: "Kashish.mp3", coverPath: "po7.webp" },
+    { songName: "Gabriela", filePath: "Gabriela.mp3", coverPath: "po8.jpg" },
+    { songName: "We Don't Talk Anymore", filePath: "s9.mp3", coverPath: "po9.webp" },
+    { songName: "Attention", filePath: "Attention.mp3", coverPath: "po10.webp" },
 
 ];
 
