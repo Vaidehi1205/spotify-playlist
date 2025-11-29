@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify Web Player</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="logo.png" type="image/png">
+
+    <meta name="theme-color" content="#1db954">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav>
+        <div class="nav-left">
+            <ul>
+                <li class="brand"><img src="logo.png" alt="Spotify Logo"></li>
+                <li class="title">Spotify</li>
+            </ul>
+        </div>
+    </nav>
+
+    <ul class="mobile-menu"></ul>
+
+    <!-- MAIN CONTENT -->
+    <div class="container">
+
+        <div class="banner">
+            <img id="bannerImage" src="po1.jpeg" alt="Album Cover">
+        </div>
+
+        <div class="song-list">
+            <h1>Your Favourites</h1>
+            <div class="songContainer">
+
+                <div class="songItem">
+                    <img src="po1.jpeg" alt="Album Cover">
+                    <span class="songName">Perfect</span>
+                    <span class="songDuration">--:--</span>
+                    <i class="fa-solid fa-play songPlayBtn" data-index="0"></i>
+                </div>
+
+                <div class="songItem">
+                    <img src="po2.webp" alt="Album Cover">
+                    <span class="songName">Promise</span>
+                    <span class="songDuration">--:--</span>
+                    <i class="fa-solid fa-play songPlayBtn" data-index="1"></i>
+                </div>
+
+                <div class="songItem">
+                    <img src="po3.jpg" alt="Album Cover">
+                    <span class="songName">Preet Re</span>
+                    <span class="songDuration">--:--</span>
+                    <i class="fa-solid fa-play songPlayBtn" data-index="2"></i>
+                </div>
+
+                <div class="songItem">
+                    <img src="po4.webp" alt="Album Cover">
+                    <span class="songName">Ishq Hai</span>
+                    <span class="songDuration">--:--</span>
+                    <i class="fa-solid fa-play songPlayBtn" data-index="3"></i>
+                </div>
+
+                <div class="songItem">
+                    <img src="po5.jpg" alt="Album Cover">
+                    <span class="songName">O Maahi</span>
+                    <span class="songDuration">--:--</span>
+                    <i class="fa-solid fa-play songPlayBtn" data-index="4"></i>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- BOTTOM PLAYER -->
+    <div class="bottom">
+        <input type="range" id="myProgressBar" min="0" max="100">
+        <div class="controls">
+            <i class="fa-solid fa-shuffle" id="shuffle"></i>
+            <i class="fa-solid fa-backward-step" id="prev"></i>
+            <i class="fa-solid fa-play" id="masterPlay"></i>
+            <i class="fa-solid fa-forward-step" id="next"></i>
+            <i class="fa-solid fa-repeat" id="repeat"></i>
+        </div>
+        <div class="volume-box">
+            <i class="fa-solid fa-volume-high" id="muteBtn"></i>
+            <input type="range" id="volumeControl" min="0" max="100" value="80">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
