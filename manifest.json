@@ -1,6 +1,6 @@
 {
-  "name": "Spotify Web Player",
-  "short_name": "Spotify",
+  "name": "DiTunes Web Player",
+  "short_name": "DiTunes",
   "description": "Offline-capable music player",
   "start_url": "/index.html",
   "display": "standalone",

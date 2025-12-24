@@ -16,16 +16,21 @@ let songItems = Array.from(document.getElementsByClassName("songItem"));
 let songButtons = Array.from(document.getElementsByClassName("songPlayBtn"));
 
 let songs = [
-    { songName: "Perfect", filePath: "./Perfect.mp3", coverPath: "./po1.jpeg" },
-    { songName: "Promise", filePath: "./Promise.mp3", coverPath: "./po2.webp" },
-    { songName: "Dooron Dooron", filePath: "./Dooron Dooron.mp3", coverPath: "./po3.webp" },
-    { songName: "Samjho Na", filePath: "./SAMJHO NA.mp3", coverPath: "./po4.webp" },
-    { songName: "Arz Kiya Hai", filePath: "./Arz Kiya Hai.mp3", coverPath: "./po5.webp" },
-    { songName: "Ehsaas", filePath: "./Ehsaas.mp3", coverPath: "./po6.webp" },
-    { songName: "Kashish", filePath: "./Kashish.mp3", coverPath: "./po7.webp" },
-    { songName: "Gabriela", filePath: "./Gabriela.mp3", coverPath: "./po8.jpg" },
-    { songName: "We Don't Talk Anymore", filePath: "./s9.mp3", coverPath: "./po9.webp" },
-    { songName: "Attention", filePath: "./Attention.mp3", coverPath: "./po10.webp" },
+    { songName: "Dooron Dooron", filePath: "./Dooron Dooron.mp3", coverPath: "./po4.webp" },
+    { songName: "Ehsaas", filePath: "./Ehsaas.mp3", coverPath: "./po5.webp" },
+    { songName: "Kashish", filePath: "./Kashish.mp3", coverPath: "./po6.webp" },
+    { songName: "Arziyaan", filePath: "./Arz Kiya Hai.mp3", coverPath: "./po1.webp" },
+    { songName: "Bairiyaa", filePath: "./Bairiyaa.mp3", coverPath: "./po2.webp" },
+    { songName: "Haseen", filePath: "./Haseen.mp3", coverPath: "./po3.webp" },
+    { songName: "Hope", filePath: "./Hope.mp3", coverPath: "./po7.webp" },
+    { songName: "I'm Done", filePath: "./I_M_Done.mp3", coverPath: "./po7.webp" },
+    { songName: "Mera Mann", filePath: "./Mera Mann.mp3", coverPath: "./po9.webp" },
+    { songName: "Pal Pal", filePath: "./Pal Pal.mp3", coverPath: "./po10.webp" },
+    { songName: "Preet Re", filePath: "./Preet Re.mp3", coverPath: "./po11.webp" },
+    { songName: "Samjhawan", filePath: "./Samjhawan.mp3", coverPath: "./po12.webp" },
+    { songName: "Soniyo", filePath: "./Soniyo.mp3", coverPath: "./po13.webp" },
+    { songName: "Zaalima", filePath: "./Zaalima.mp3", coverPath: "./po14.webp" },
+    { songName: "Zaroor", filePath: "./Zaroor.mp3", coverPath: "./po15.webp" }
 ];
 
 // Load songs

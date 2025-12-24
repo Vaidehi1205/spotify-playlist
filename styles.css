@@ -1,6 +1,6 @@
-/* ---------------------------------------------------
-   GLOBAL STYLES
---------------------------------------------------- */
+/* ===================================================
+   GLOBAL RESET & BASE
+=================================================== */
 * {
     margin: 0;
     padding: 0;
@@ -9,96 +9,80 @@
 }
 
 body {
-    background: #121212;
-    color: #fff;
+    background: radial-gradient(circle at top, #1a1a1a, #0c0c0c);
+    color: #f2f2f2;
     -webkit-tap-highlight-color: transparent;
+    overflow-x: hidden;
 }
 
-/* ---------------------------------------------------
+/* ===================================================
    NAVBAR
---------------------------------------------------- */
+=================================================== */
 nav {
     display: flex;
     justify-content: space-between;
-    padding: 15px 25px;
-    background: #000;
     align-items: center;
-    border-bottom: 1px solid #1d1d1d;
+    padding: 14px 24px;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid #1f1f1f;
 }
 
-.nav-left ul,
-.nav-right ul {
+.nav-left ul {
     display: flex;
-    gap: 18px;
-    list-style: none;
     align-items: center;
+    list-style: none;
+    gap: 14px;
 }
 
 .brand img {
-    width: 50px;
-    height: auto;
+    width: 48px;
 }
 
 .title {
     font-size: 26px;
     font-weight: 600;
-    letter-spacing: 0.5px;
+    color: white;
 }
 
-.nav-right ul li {
-    cursor: pointer;
-    font-size: 16px;
-    opacity: 0.85;
-    transition: 0.3s ease;
-}
-
-.nav-right ul li:hover {
-    color: #1db954;
-    opacity: 1;
-}
-
-.menu-icon {
-    display: none;
-    font-size: 30px;
-    cursor: pointer;
-}
-
-.mobile-menu {
-    display: none;
-    flex-direction: column;
-    background: #000;
-    padding: 20px;
-}
-
-.mobile-menu li {
-    padding: 12px;
-    border-bottom: 1px solid #333;
-    list-style: none;
-}
-
-/* ---------------------------------------------------
+/* ===================================================
    MAIN CONTAINER
---------------------------------------------------- */
+=================================================== */
 .container {
     padding: 20px;
-    padding-bottom: 140px;
+    padding-bottom: 160px;
+}
+
+/* ===================================================
+   BANNER
+=================================================== */
+.banner {
+    position: relative;
+    margin-bottom: 25px;
 }
 
 .banner img {
     width: 100%;
-    border-radius: 14px;
-    margin-bottom: 20px;
+    height: 500px;
     object-fit: cover;
-    height: 200px;
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.7);
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
 }
 
-/* ---------------------------------------------------
+.banner::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 16px;
+    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.65));
+}
+
+/* ===================================================
    SONG LIST
---------------------------------------------------- */
+=================================================== */
 .song-list h1 {
-    margin-bottom: 15px;
     font-size: 22px;
+    margin-bottom: 15px;
     font-weight: 600;
 }
 
@@ -106,323 +90,217 @@ nav {
     display: grid;
     grid-template-columns: 60px 1fr auto auto;
     align-items: center;
-    padding: 12px;
-    background: #181818;
-    margin: 13px 0;
-    border-radius: 12px;
-    transition: 0.25s;
-    border: 1px solid #222;
     gap: 18px;
+    padding: 12px 15px;
+    margin-bottom: 14px;
+    background: rgba(24, 24, 24, 0.85);
+    backdrop-filter: blur(6px);
+    border-radius: 14px;
+    border: 1px solid #242424;
+    transition: 0.25s ease;
 }
 
 .songItem:hover {
-    background: #202020;
-    transform: translateY(-2px);
-    border-color: #2e2e2e;
+    transform: translateY(-3px);
+    border-color: #1db954;
+    box-shadow: 0 12px 30px rgba(29, 185, 84, 0.25);
 }
 
 .songItem img {
     width: 55px;
     height: 55px;
-    border-radius: 8px;
     object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.6);
 }
 
 .songName {
-    font-weight: 500;
     font-size: 16px;
+    font-weight: 500;
 }
 
 .songDuration {
     font-size: 14px;
-    opacity: 0.7;
+    opacity: 0.65;
 }
 
 .songPlayBtn {
-    cursor: pointer;
     font-size: 22px;
-    transition: 0.2s ease;
-    padding: 4px 6px;
+    cursor: pointer;
+    padding: 6px 8px;
+    border-radius: 50%;
+    background: rgba(29, 185, 84, 0.15);
+    transition: 0.25s;
 }
 
 .songPlayBtn:hover {
-    color: #1db954;
+    background: #1db954;
+    color: #000;
     transform: scale(1.1);
 }
 
-/* ---------------------------------------------------
-   EQUALIZER ANIMATION
---------------------------------------------------- */
-.equalizer {
-    display: flex;
-    gap: 3px;
-    margin-left: 10px;
-}
-
-.equalizer div {
-    width: 4px;
-    height: 12px;
-    background: #1db954;
-    border-radius: 2px;
-    animation: equalize 0.7s linear infinite;
-    animation-play-state: paused;
-}
-
-@keyframes equalize {
-    0% {
-        height: 8px;
-    }
-
-    50% {
-        height: 22px;
-    }
-
-    100% {
-        height: 8px;
-    }
-}
-
-/* ---------------------------------------------------
+/* ===================================================
    BOTTOM PLAYER
---------------------------------------------------- */
+=================================================== */
 .bottom {
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
-    background: #000;
-    padding: 15px 20px;
+    padding: 16px 20px;
+    background: linear-gradient(to top, #000, #0e0e0e);
+    backdrop-filter: blur(12px);
     border-top: 1px solid #222;
-    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.7);
 }
 
+/* Progress Bar */
 #myProgressBar {
     width: 100%;
     height: 6px;
-    margin-bottom: 15px;
-    cursor: pointer;
+    margin-bottom: 14px;
+    appearance: none;
     background: #333;
-    border-radius: 6px;
+    border-radius: 10px;
+    cursor: pointer;
 }
 
+#myProgressBar::-webkit-slider-thumb {
+    appearance: none;
+    width: 14px;
+    height: 14px;
+    background: #1db954;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #1db954;
+}
+
+/* Timestamp */
 .timestamp {
-    font-size: 14px;
-    color: #555;
-    margin-top: 8px;
     text-align: center;
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 10px;
 }
 
+/* Controls */
 .controls {
     display: flex;
     justify-content: center;
-    gap: 28px;
+    align-items: center;
+    gap: 26px;
     font-size: 26px;
     margin-bottom: 12px;
 }
 
 .controls i {
     cursor: pointer;
-    transition: 0.3s;
+    opacity: 0.85;
+    transition: 0.25s;
 }
 
 .controls i:hover {
+    opacity: 1;
     color: #1db954;
     transform: scale(1.15);
+    text-shadow: 0 0 14px rgba(29, 185, 84, 0.7);
 }
 
-/* ---------------------------------------------------
-   VOLUME CONTROL
---------------------------------------------------- */
+/* Volume */
 .volume-box {
     display: flex;
+    justify-content: center;
     align-items: center;
     gap: 12px;
 }
 
 .volume-box input {
-    width: 130px;
+    width: 120px;
     height: 5px;
+    appearance: none;
+    background: linear-gradient(to right, #1db954, #0f5);
+    border-radius: 10px;
     cursor: pointer;
 }
 
-/* ---------------------------------------------------
-   MOBILE UI — SUPER OPTIMIZED FOR SMALL SCREENS
---------------------------------------------------- */
+.volume-box input::-webkit-slider-thumb {
+    appearance: none;
+    width: 14px;
+    height: 14px;
+    background: #fff;
+    border-radius: 50%;
+}
 
-/* Tablets & large phones */
-@media (max-width: 700px) {
+/* ===================================================
+   RESPONSIVE
+=================================================== */
+/* ===================================================
+   MOBILE PLAY BUTTON ENHANCEMENT
+=================================================== */
+@media (max-width: 600px) {
 
-    nav {
-        padding: 12px 18px;
+    .songPlayBtn {
+        font-size: 26px;
+        padding: 10px 12px;
+        background: linear-gradient(135deg, #1db954, #6dffb2);
+        color: #000;
+        border-radius: 50%;
+        box-shadow: 
+            0 6px 18px rgba(29, 185, 84, 0.55),
+            0 0 0 6px rgba(29, 185, 84, 0.15);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
-    .nav-right ul {
-        display: none;
-    }
-
-    .menu-icon {
-        display: block;
-        font-size: 30px;
-    }
-
-    .banner img {
-        height: 180px;
+    .songPlayBtn:active {
+        transform: scale(0.9);
+        box-shadow: 
+            0 4px 12px rgba(29, 185, 84, 0.45),
+            0 0 0 10px rgba(29, 185, 84, 0.2);
     }
 
     .songItem {
-        grid-template-columns: 50px 1fr auto;
-        padding: 12px;
+        gap: 14px;
     }
-
-    .songItem img {
-        width: 50px;
-        height: 50px;
-    }
-
-    .controls {
-        gap: 20px;
-        font-size: 22px;
-    }
-
-    .volume-box input {
-        width: 90px;
+    .songItem.playing {
+        border-color: #1db954;
+        box-shadow: 0 0 25px rgba(29, 185, 84, 0.35);
     }
 }
 
-/* ---------------------------------------------------
-   MOBILE (small phones)
---------------------------------------------------- */
-@media (max-width: 480px) {
 
-    /* NAV */
+@media (max-width: 480px) {
     .title {
         font-size: 20px;
     }
 
-    nav {
-        padding: 10px 15px;
-    }
-
-    .brand img {
-        width: 40px;
-    }
-
-    /* BANNER */
     .banner img {
-        height: 150px;
-        border-radius: 10px;
-    }
-
-    /* SONG ITEM */
-    .songItem {
-        grid-template-columns: 45px 1fr auto;
-        padding: 10px;
-        margin: 10px 0;
-        gap: 15px;
-        border-radius: 10px;
-    }
-
-    .songItem img {
-        width: 45px;
-        height: 45px;
+        height: 160px;
     }
 
     .songName {
         font-size: 14px;
-        line-height: 18px;
     }
 
     .songPlayBtn {
         font-size: 20px;
     }
 
-    /* PLAYER */
-    #myProgressBar {
-        height: 5px;
-        margin-bottom: 12px;
-    }
-
     .controls {
-        gap: 18px;
         font-size: 20px;
-    }
-
-    .volume-box {
-        justify-content: center;
-        gap: 10px;
+        gap: 18px;
     }
 
     .volume-box input {
-        width: 70px;
-    }
-
-    .bottom {
-        padding: 12px 15px;
+        width: 80px;
     }
 }
 
-/* ---------------------------------------------------
-   EXTRA SMALL (older iPhones / very small screens)
---------------------------------------------------- */
 @media (max-width: 360px) {
-
-    .title {
-        font-size: 18px;
-    }
-
-    .songItem {
-        grid-template-columns: 42px 1fr auto;
-        padding: 9px;
-        gap: 15px;
-    }
-
-    .songItem img {
-        width: 40px;
-        height: 40px;
-    }
-
     .controls {
-        gap: 14px;
         font-size: 18px;
+        gap: 14px;
     }
 
     .volume-box input {
-        width: 60px;
-    }
-
-    .bottom {
-        padding: 10px 12px;
-    }
-}
-
-/* ---------------------------------------------------
-   ULTRA SMALL DEVICES (tiny Android phones)
---------------------------------------------------- */
-@media (max-width: 300px) {
-
-    nav {
-        padding: 8px 10px;
-    }
-
-    .title {
-        font-size: 16px;
-    }
-
-    .banner img {
-        height: 120px;
-    }
-
-    .songItem {
-        grid-template-columns: 38px 1fr auto;
-        gap: 15px;
-    }
-
-    .songItem img {
-        width: 35px;
-        height: 35px;
-    }
-
-    .controls i {
-        font-size: 16px;
+        width: 65px;
     }
 }
