@@ -10,7 +10,7 @@ const APP_ASSETS = [
   '/banner.webp',
 
   // images
-  '/po1.jpeg',
+  '/po1.webp',
   '/po2.webp',
   '/po3.webp',
   '/po4.webp',
@@ -87,7 +87,7 @@ self.addEventListener('fetch', event => {
     caches.match(event.request).then(cached => {
       return cached || fetch(event.request).catch(() => {
         if (event.request.headers.get('accept')?.includes('text/html')) {
-          return caches.match('/offline.html');
+          return caches.match('/index.html');
         }
       });
     })
