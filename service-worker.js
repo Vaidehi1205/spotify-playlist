@@ -4,7 +4,6 @@ const CACHE_NAME = 'spotify-pwa-v3';
 const APP_ASSETS = [
   '/',
   '/index.html',
-  '/offline.html',
   '/styles.css',
   '/script.js',
   '/logo.png',
